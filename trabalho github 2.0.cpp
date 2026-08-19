@@ -4,7 +4,8 @@
 
 
 int main(int argc, char *argv[]) {
-/*	//PRIMEIRO EXERCICIO
+	
+	//PRIMEIRO EXERCICIO
 	//troca a ordem do primeiro c o segundo
 	
 	int primeiro, segundo, aux;
@@ -59,18 +60,23 @@ int main(int argc, char *argv[]) {
 	printf ("O numero %d em binario = %d%d%d%d%d%d%d", n, resultado%2, bit_2, bit_4, bit_8, bit_16, bit_32, bit_64);
 	
 	
+	
 	//QUARTO EXERCICIO
 	
 	float va, com, venda, total;
 	
-	printf("digite o valor do salario");
+	printf("digite o valor do salario:");
 	scanf("%f", &va);
 	
-	printf("digite o total das vendas");
+	printf("digite o total das vendas:");
 	scanf("%f", &venda);
 	
 	com = venda * 0,85;
-*/
+	total = venda + com + va;
+	
+	printf( "%.2f\n\n", total);
+	
+
 	//QUINTO EXERCICIO
 	//SEXTO EXERCICIO
 	//SETIMO EXERCICIO
@@ -78,16 +84,19 @@ int main(int argc, char *argv[]) {
 	//OITAVO EXERCICIO
 	int x1, x2, y1, y2, p1, p2, dist;
 	
-	printf("insira as coordenadas do ponto P1");
+	printf("insira as coordenadas do ponto P1:");
 	scanf("%d , %d", &x1, &y1);
-	printf("insira as coordendas so ponto P1");
+	
+	printf("insira as coordendas so ponto P1:");
 	scanf("%d %d", &x2, &y2);
+	
 	p1 = pow(x2-x1, 2); 
 	p2 = pow(y2-y1, 2);
 	dist = sqrt(p1+p2);
+	
 	printf("distancia: %f",dist);
+	
 	return 0;
-}
 
 
 
