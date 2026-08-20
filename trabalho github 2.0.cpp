@@ -23,13 +23,25 @@ int main(int argc, char *argv[]) {
 	printf("%d, %d \n", primeiro, segundo);
 	
 	
-	//SEGUNDO EXERCICIO 
+	//SEGUNDO EXERCICIO 	
 	
-	double valor;
-	
-	printf ("digite um valo");
-	scanf("%lf", &valor);
-	printf("valor em notacao cientifica : %e\n", valor);
+	double numero, mantissa;
+	int expoente = 0;
+	printf("Digite o numero que deseja ver em notacao cientifica: ");
+	scanf("%lf", &numero);
+	mantissa = numero; 
+	if (mantissa != 0) {
+        while (mantissa >= 10) {
+            mantissa /= 10;
+            expoente++;
+        }
+        while (mantissa < 1) {
+            mantissa *= 10;
+            expoente--;
+        }
+    }
+
+    printf("Valor em notacao cientifica: %.2lf x 10^%d\n\n\n", mantissa, expoente);
 	
 	
 	//TERCEIRO EXERCICIO
@@ -71,34 +83,42 @@ int main(int argc, char *argv[]) {
 	printf("digite o total das vendas:");
 	scanf("%f", &venda);
 	
-	com = venda * 0,85;
+	com = venda * 0,15;
 	total = venda + com + va;
 	
 	printf( "%.2f\n\n", total);
 	
 
 	//QUINTO EXERCICIO
+	
+	
+	
+	
+	
+	
+	
 	//SEXTO EXERCICIO
 	//SETIMO EXERCICIO
 	
 	//OITAVO EXERCICIO
-	int x1, x2, y1, y2, p1, p2, dist;
+		
+	int x1, x2, y1, y2, p1, p2;
+	float dist;
 	
 	printf("insira as coordenadas do ponto P1:");
-	scanf("%d , %d", &x1, &y1);
+	scanf("%d,%d", &x1, &y1);
 	
 	printf("insira as coordendas so ponto P1:");
-	scanf("%d %d", &x2, &y2);
+	scanf("%d,%d", &x2, &y2);
 	
 	p1 = pow(x2-x1, 2); 
 	p2 = pow(y2-y1, 2);
 	dist = sqrt(p1+p2);
 	
-	printf("distancia: %f",dist);
+	printf("distancia: (%f)",dist);
 	
 	return 0;
-
-
+	
 
 
 
