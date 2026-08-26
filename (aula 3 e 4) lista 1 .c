@@ -90,6 +90,33 @@ int main(int argc, char *argv[]) {
 	
 
 	//QUINTO EXERCICIO
+
+		float a, b, c, d, soma, media, prodt;
+	
+	
+    printf("Digite o primeiro numero: ");
+    scanf("%f", &a);
+
+    printf("Digite o segundo numero: ");
+    scanf("%f", &b);
+
+    printf("Digite o terceiro numero: ");
+    scanf("%f", &c);
+
+    printf("Digite o quarto numero: ");
+    scanf("%f", &d);
+    
+    
+    soma = a+b+c+d;
+    printf("A soma dos 4 valores e: %f\n", soma);
+    
+    
+    media = (a+b+c+d)/4.0;
+    printf("A media e: %.2f\n", media);
+    
+    
+    prodt = a*b*c*d;
+    printf("O produtorio e: %f/n", prodt);
 	
 	
 	
