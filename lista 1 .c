@@ -98,6 +98,20 @@ int main(int argc, char *argv[]) {
 	
 	
 	//SEXTO EXERCICIO
+	
+	int d, ianos, imeses, idias;
+
+    printf("Conversor de dias em Ano(s), Mes(es), Dia(s)\n");
+    printf("Digite o numero de dias: ");
+    scanf("%d", &d);
+
+
+    ianos = d / 365;
+    imeses = (d %365) / 30;
+    idias = d %365 % 30;
+
+    printf("Sua idade = %d Ano(s), %d Mes(s), %d Dia(s)", ianos, imeses, idias);
+
 	//SETIMO EXERCICIO
 	
 	//OITAVO EXERCICIO
@@ -118,8 +132,4 @@ int main(int argc, char *argv[]) {
 	printf("distancia: (%f)",dist);
 	
 	return 0;
-	
-
-
-
-
+}
