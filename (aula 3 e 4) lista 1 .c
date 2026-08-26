@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#define pi 3.14159
 
 
 int main(int argc, char *argv[]) {
@@ -140,6 +141,15 @@ int main(int argc, char *argv[]) {
     printf("Sua idade = %d Ano(s), %d Mes(s), %d Dia(s)", ianos, imeses, idias);
 
 	//SETIMO EXERCICIO
+	float volume, raio;
+	
+	printf("digite o raio:");
+	scanf("%f", &raio);
+	
+	volume = (3.0/4.0)* pi * pow (raio, 3);
+
+    printf("O volume da esfera e: %.2f\n", volume);
+    
 	
 	//OITAVO EXERCICIO
 		
