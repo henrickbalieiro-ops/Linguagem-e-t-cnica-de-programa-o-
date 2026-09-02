@@ -5,7 +5,17 @@ int main(int argc, char *argv[]) {
 	
 	//EX1
 	
+    long double ano_atual, idade, ano_nascimento;
 	
+	printf("digite sua idade: ");
+	scanf("%Lf", &idade);
+	
+	printf("digite o ano: ");
+	scanf("%Lf", &ano_atual);
+	
+	ano_nascimento = ano_atual - idade;
+	
+    printf("voe nasceu no ano de: %Lf", ano_nascimento);
 	
 	//EX10
 	
