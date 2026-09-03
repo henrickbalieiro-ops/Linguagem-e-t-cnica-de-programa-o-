@@ -74,8 +74,19 @@ int main(int argc, char *argv[]) {
 	printf("o antecessor e sucessor sao: %.2d, %.2d ", antecessor, sucessor);
 */	
 	//EX7
-	float 
 	
+	float g1, g2, g3;
+	printf("qual o valor recebido por cada ganhador?\n");
+	g1 = 0.46 * 780.000;
+	g2 = 0.32 * 780.000;
+	g3 = (g1-g2);
+	
+	printf("o primeiro particiante recebera %.2f, o segundo %.2f, e o terceiro %.2f", g1, g2, g3);
+	
+	//EX8
+	
+	int horas, minutos, segundos;
+	printf("") 
 		
 /*	
 	//EX10
