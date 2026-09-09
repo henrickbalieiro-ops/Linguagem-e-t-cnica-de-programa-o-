@@ -3,7 +3,7 @@
 #include <math.h>	
 
 int main(int argc, char *argv[]) {
-/*	
+	
 	//EX1
 	
    	float anoatual, idade, anonascimento;
@@ -72,7 +72,7 @@ int main(int argc, char *argv[]) {
 	sucessor = numero + 1;
 	
 	printf("o antecessor e sucessor sao: %.2d, %.2d ", antecessor, sucessor);
-*/	
+	
 	//EX7
 	
 	float g1, g2, g3;
@@ -96,8 +96,19 @@ int main(int argc, char *argv[]) {
 	printf("%.2d segundos e igual a %.2d minutos e %2.d horas ", minutos, horas);
 
 	//EX9
+	float temp_horas, km, distancia, litros;
+	
+	printf("Informe o tempo percorrido(horas): ");		
+	scanf("%f", &temp_horas);
+	
+	printf("Infore a velocidade media do veiculo(em km/h): ");
+	scanf("%f", &km);
+	
+	distancia = temp_horas*km;
+	litros = distancia*12;
 		
-/*	
+	printf("A distancia percorida e de %.3f, e a quantia de litros gastos e %.3f litrinhos", distancia, litros);	
+	
 	//EX10
 	
 	int a, b, c, d, maior, maior_temp1, maior_temp2;
@@ -114,6 +125,6 @@ int main(int argc, char *argv[]) {
     
     printf("o maior entre |%d|%d|%d|%d| = %d", a,b,c,d, maior);
     
-*/	 
+	 
 	return 0;
 }
