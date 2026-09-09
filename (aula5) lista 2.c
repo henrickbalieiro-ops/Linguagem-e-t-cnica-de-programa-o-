@@ -7,20 +7,22 @@ int main(int argc, char *argv[]) {
 	//EX1
 	
    	float anoatual, idade, anonascimento;
+   	printf("----> QUAL ANO VC NASCEU <----\n");
 	
 	printf("digite sua idade: ");
 	scanf("%f", &idade);
 	
-	printf("digite o ano: ");
+	printf("digite o ano atual: ");
 	scanf("%f", &anoatual);
 	
 	anonascimento = anoatual - idade;
 	
-    printf("voce nasceu no ano de: %.0f", anonascimento);
+    printf("voce nasceu no ano de: %.0f\n", anonascimento);
     
     //EX2
     
     float kmh, ms;
+    printf("----> CONVERSOR QUILOMETROS PARA METROS <----\n ");
     
     printf("apresente a velocidade km/h: ");
     scanf("%f", &kmh);
@@ -32,6 +34,7 @@ int main(int argc, char *argv[]) {
     //EX3
     
     float real, dolar;
+    printf("----> QUANTO ESTA CUSTANDO O DOLAR <----\n");
     
     printf("insira o valor em real: ");
     scanf("%f", &real);
@@ -43,27 +46,30 @@ int main(int argc, char *argv[]) {
     //EX4
     
 	float celsius, fahrenheit;
+	printf("----> CONVERSOR CELSIUS PARA FAHRENHEIT <----\n");
 	
 	printf("digite a temperatura um graus celsius: ");
 	scanf("%f", &celsius);
 	
 	fahrenheit = celsius * (9.0/5.0) + 32.0;
 	
-	printf("%.2f graus celsius equivalem a %.2f fahrenheit", celsius, fahrenheit);
+	printf("%.2f graus celsius equivalem a %.2f fahrenheit\n", celsius, fahrenheit);
 
     //EX5
     
 	float graus, radianos;
+	printf("----> GRAUS E RADIANOS <----\n");
 	
 	printf("apresente o angulo em graus: ");	
 	scanf("%f", &graus);
 	
 	radianos = graus * 3.141592/180;
-	printf("%.2f equivalem a %.2f radianos", graus, radianos);
+	printf("%.2f equivalem a %.2f radianos\n", graus, radianos);
 	
 	//EX6
 	
 	int numero, antecessor, sucessor;
+	printf("----> ANTECESSOR E SUCESSOR <----\n");
 	
 	printf("digite um numero: ");
 	scanf("%d", &numero);
@@ -71,7 +77,7 @@ int main(int argc, char *argv[]) {
 	antecessor = numero - 1;
 	sucessor = numero + 1;
 	
-	printf("o antecessor e sucessor sao: %.2d, %.2d ", antecessor, sucessor);
+	printf("o antecessor e sucessor sao: %.2d, %.2d \n", antecessor, sucessor);
 	
 	//EX7
 	
@@ -81,11 +87,13 @@ int main(int argc, char *argv[]) {
 	g2 = 0.32 * 780.000;
 	g3 = (g1-g2);
 	
-	printf("o primeiro particiante recebera %.2f, o segundo %.2f, e o terceiro %.2f", g1, g2, g3);
+	printf("o primeiro particiante recebera %.2f, o segundo %.2f, e o terceiro %.2f\n", g1, g2, g3);
 	
 	//EX8
 	
 	int horas, minutos, segundos;
+	printf("----> CONVERSOR SEGUNDOS PARA MINUTOS HORAS <----\n");
+	
 	printf("digite os segundos: ");
 	scanf("%d", &segundos); 
 	
@@ -93,10 +101,12 @@ int main(int argc, char *argv[]) {
 	horas = minutos % 60;
 
 	
-	printf("%.2d segundos e igual a %.2d minutos e %2.d horas ", minutos, horas);
+	printf("%.2d segundos e igual a %.2d minutos e %2.d horas\n ", minutos, horas);
 
 	//EX9
+	
 	float temp_horas, km, distancia, litros;
+	printf("----> QUANTOS LITROS TU GASTOU <----\n");
 	
 	printf("Informe o tempo percorrido(horas): ");		
 	scanf("%f", &temp_horas);
@@ -107,11 +117,12 @@ int main(int argc, char *argv[]) {
 	distancia = temp_horas*km;
 	litros = distancia*12;
 		
-	printf("A distancia percorida e de %.3f, e a quantia de litros gastos e %.3f litrinhos", distancia, litros);	
+	printf("A distancia percorida e de %.3f, e a quantia de litros gastos e %.3f litrinhos\n", distancia, litros);	
 	
 	//EX10
 	
 	int a, b, c, d, maior, maior_temp1, maior_temp2;
+	printf("----> QUAL DOS 4 NUMEROS E MAIOR <----\n");
 	
 	printf("informe os valores a serem comparados:");
 	scanf("%d %d %d %d", &a,&b,&c,&d);
