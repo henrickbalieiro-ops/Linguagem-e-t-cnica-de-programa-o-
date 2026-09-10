@@ -97,11 +97,10 @@ int main(int argc, char *argv[]) {
 	printf("digite os segundos: ");
 	scanf("%d", &segundos); 
 	
+	horas = segundos / 3600;
 	minutos = (segundos % 3600) / 60;
-	horas = minutos % 60;
-
 	
-	printf("%.2d segundos e igual a %.2d minutos e %2.d horas\n ", minutos, horas);
+	printf("%d horas e %d minutos\n", horas, minutos);
 
 	//EX9
 	
