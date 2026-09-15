@@ -1,9 +1,9 @@
-#include <stdio.h>                  //é um comando que inclui uma biblioteca no seu programa.
-#include <stdlib.h>
-#include <math.h>                   //biblioteca matematica 
+#include <stdio.h>                  //é um comando que inclui uma biblioteca no seu programaEla permite usar comandos como printf e scanf
+#include <stdlib.h>                 //funcoes gerais da linguagem
+#include <math.h>                   //biblioteca matematica, permite fazer calculos e usar funcoes como pow(potencia)
 #define pi 3.14
 
-int main(int argc, char *argv[]) {  //inicio programa 
+int main(int argc, char *argv[]) {  //int main:inicio programa 
 	
 	float area, raio;                             //float(%f): é um tipo de variável usado para armazenar números com casas decimais EX 0.1
 	printf("Insira o valor do raio:");            //int(%d): tipo de variável usado para armazenar números inteiros EX 1 
@@ -48,4 +48,4 @@ int main(int argc, char *argv[]) {  //inicio programa
 	
 	
 	return 0;
-}
+}    //finaliza programa 
