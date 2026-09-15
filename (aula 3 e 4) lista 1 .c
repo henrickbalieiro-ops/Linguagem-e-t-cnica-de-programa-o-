@@ -10,11 +10,12 @@ int main(int argc, char *argv[]) {
 	//troca a ordem do primeiro c o segundo
 	
 	int primeiro, segundo, aux;
+	printf("---->INVERTENDO A ORDEM<----\n");
 	
-	printf("insira o primeiro valor: ");
+	printf("insira o primeiro valor:\n ");
 	scanf("%d", &primeiro);
 	
-	printf("insira o segundo valor: ");
+	printf("insira o segundo valor:\n ");
 	scanf("%d", &segundo);
 	
 	aux = primeiro;
@@ -27,8 +28,11 @@ int main(int argc, char *argv[]) {
 	//SEGUNDO EXERCICIO 	
 	
 	double numero, mantissa;
+	
+	printf("---->NUMERO NORMAL PARA NOTACAO<----\n");
+	
 	int expoente = 0;
-	printf("Digite o numero que deseja ver em notacao cientifica: ");
+	printf("Digite o numero que deseja ver em notacao cientifica:\n ");
 	scanf("%lf", &numero);
 	mantissa = numero; 
 	if (mantissa != 0) {
@@ -42,12 +46,15 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    printf("Valor em notacao cientifica: %.2lf x 10^%d\n\n\n", mantissa, expoente);
+    printf("Valor em notacao cientifica: %.2lf x 10^%d\n", mantissa, expoente);
 	
 	
 	//TERCEIRO EXERCICIO
 	int n, resultado, bit_64, bit_32, bit_16, bit_8, bit_4, bit_2;
-	printf("digite um valor para a convercao em binario");
+	
+	printf("---->NUMERO NORMAL PARA BINARIO<----\n");
+	
+	printf("digite um valor para a convercao em binario: \n");
 	scanf("%d",&n);   // n=52                     //& endereco de memoria 
 	
 	
@@ -70,13 +77,15 @@ int main(int argc, char *argv[]) {
 	resultado = resultado/2;
 
 	
-	printf ("O numero %d em binario = %d%d%d%d%d%d%d", n, resultado%2, bit_2, bit_4, bit_8, bit_16, bit_32, bit_64);
+	printf ("O numero %d em binario = %d%d%d%d%d%d%d\n", n, resultado%2, bit_2, bit_4, bit_8, bit_16, bit_32, bit_64);
 	
 	
 	
 	//QUARTO EXERCICIO
 	
 	float va, com, venda, total;
+	
+	printf("---->SALARIO<----\n");
 	
 	printf("digite o valor do salario:");
 	scanf("%f", &va);
@@ -92,8 +101,9 @@ int main(int argc, char *argv[]) {
 
 	//QUINTO EXERCICIO
 
-		float a, b, c, d, soma, media, prodt;
+	float a, b, c, d, soma, media, prodt;
 	
+	printf("---->SOMA MEDIO E PRODUTORIO<----\n");
 	
     printf("Digite o primeiro numero: ");
     scanf("%f", &a);
@@ -117,30 +127,29 @@ int main(int argc, char *argv[]) {
     
     
     prodt = a*b*c*d;
-    printf("O produtorio e: %f/n", prodt);
-	
-	
-	
-	
-	
+    printf("O produtorio e: %f\n", prodt);
 	
 	
 	//SEXTO EXERCICIO
 	
     float idade, anos, meses, dias;
     
-	printf("\nInsira sua idade: ");
+    printf("---->ANOS MESES E DIAS<----\n");
+    
+	printf("\nInsira sua idade:\n ");
 	scanf("%f", &idade);
 	
 	meses = idade*12;
 	dias = idade*365;
 	
-	printf("Voce tem %f anos, %f meses, %f dias", idade, meses, dias);
+	printf("Voce tem %f anos, %f meses, %f dias\n", idade, meses, dias);
 
 	//SETIMO EXERCICIO
 	float volume, raio;
 	
-	printf("digite o raio:");
+	printf("---->VOLUME ESFERA<----\n");
+	
+	printf("digite o raio:\n");
 	scanf("%f", &raio);
 	
 	volume = (3.0/4.0)* pi * pow (raio, 3);
@@ -153,10 +162,12 @@ int main(int argc, char *argv[]) {
 	int x1, x2, y1, y2, p1, p2;
 	float dist;
 	
-	printf("insira as coordenadas do ponto P1:");
+	printf("---->DISTANCIA<----\n");
+	
+	printf("insira as coordenadas do ponto P1:\n");
 	scanf("%d,%d", &x1, &y1);
 	
-	printf("insira as coordendas so ponto P1:");
+	printf("insira as coordendas so ponto P1:\n");
 	scanf("%d,%d", &x2, &y2);
 	
 	p1 = pow(x2-x1, 2); 
