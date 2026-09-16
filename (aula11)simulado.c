@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
-	/*
+	
 	//ex1
 	
 	int a, b, c, d, aux;                              //a b c d 1 2 3 4 
@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
 	b = aux;
 	
 	printf("a nova ordem e %d %d %d %d", a, b, c, d);
-	*/
+	
 	//ex2
 	
 	float valor_patrimonial, quant_acoes, preco_atual, pvp, vpa;
