@@ -11,6 +11,8 @@ int main() {
     n_mochila = qtd_tot/capx;
     
     printf("voce precisa de %d mochilas", n_mochila);
+
+	//exercicio impar e multiplo 5
 	
 	return 0;
 }
