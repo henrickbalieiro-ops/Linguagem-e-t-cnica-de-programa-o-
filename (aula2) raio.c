@@ -1,51 +1,165 @@
-#include <stdio.h>                  //é um comando que inclui uma biblioteca no seu programaEla permite usar comandos como printf e scanf
-#include <stdlib.h>                 //funcoes gerais da linguagem
-#include <math.h>                   //biblioteca matematica, permite fazer calculos e usar funcoes como pow(potencia)
-#define pi 3.14
 
-int main(int argc, char *argv[]) {  //int main:inicio programa 
-	
-	float area, raio;                             //float(%f): é um tipo de variável usado para armazenar números com casas decimais EX 0.1
-	printf("Insira o valor do raio:");            //int(%d): tipo de variável usado para armazenar números inteiros EX 1 
-	scanf("%f", &raio);                           //printf: é um comando usado para mostrar informações na tela.
-	                                              //scanf: é usado para receber uma informação que o usuário digita no teclado
-	area = M_PI* pow(raio,2);                     //&: quando você usa scanf, ele serve para informar o endereço da variável na memória, para que o scanf possa colocar o valor digitado nela
-	area = pi*(raio*raio);                        //pow: função da biblioteca math.h usada para fazer potências
-	
-	
-	
-	printf("A area do circulo de raio %f = %f", raio, area);
-	
-	
-	
-	
-	
-	
-	
-	
-	printf("Agora a do trapezio");
-	
-	
-	float areat, B, b, h, d;
-	
-	// B maisculo = base maior, b min = base menor e h = altura.
-	
-	printf("Digite o valor da base maior:");
-	scanf("%f", &B);
-	
-	
-	printf("Digite o valor da base menor:");
-	scanf("%f", &b);
-	
-	
-	printf("Digite o valor da altura");
-	scanf("%f", &h);
-	
-	d = 2;
-	areat = ((B+b)* h)/d;
-	
-	printf("A area do trapezio ((%f + %f)* %f) / %f = %f", B, b, h, d, areat);
-	
-	
-	return 0;
-}    //finaliza programa 
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define bandeira 9
+#define bomba -1
+
+int main(int argc, char *argv[]) {
+
+    srand(time(NULL));
+
+    int campo[9][9];
+    int visivel[9][9] = {0};
+
+    int casaX, casaY;
+    int i, j, x, y;
+    int cont;
+    int jogadas = 0;
+    int totalBombas = 10;
+    int perdeu = 0;
+
+    // Inicializa o campo
+    for(i = 0; i < 9; i++) {
+        for(j = 0; j < 9; j++) {
+            campo[i][j] = 0;
+        }
+    }
+
+    // Distribui exatamente 10 bombas
+    cont = 0;
+
+    while(cont < totalBombas) {
+
+        i = rand() % 9;
+        j = rand() % 9;
+
+        if(campo[i][j] != bomba) {
+            campo[i][j] = bomba;
+            cont++;
+        }
+    }
+
+    // Calcula as bombas vizinhas
+    for(i = 0; i < 9; i++) {
+        for(j = 0; j < 9; j++) {
+
+            if(campo[i][j] != bomba) {
+
+                cont = 0;
+
+                for(x = -1; x <= 1; x++) {
+                    for(y = -1; y <= 1; y++) {
+
+                        int nx = i + x;
+                        int ny = j + y;
+
+                        if(nx >= 0 && nx < 9 &&
+                           ny >= 0 && ny < 9) {
+
+                            if(campo[nx][ny] == bomba) {
+                                cont++;
+                            }
+                        }
+                    }
+                }
+
+                campo[i][j] = cont;
+            }
+        }
+    }
+
+    // Jogo
+    while(perdeu == 0 && jogadas < 71) {
+
+        printf("\n===== CAMPO MINADO =====\n");
+
+        printf("  ");
+        for(j = 0; j < 9; j++) {
+            printf("%d ", j);
+        }
+
+        printf("\n");
+
+        for(i = 0; i < 9; i++) {
+
+            printf("%d ", i);
+
+            for(j = 0; j < 9; j++) {
+
+                if(visivel[i][j] == 1) {
+                    printf("%d ", campo[i][j]);
+                } else {
+                    printf("# ");
+                }
+            }
+
+            printf("\n");
+        }
+
+        printf("\nLinha: ");
+        if(scanf("%d", &casaX) != 1) {
+            printf("Entrada invalida!\n");
+            return 1;
+        }
+
+        printf("Coluna: ");
+        if(scanf("%d", &casaY) != 1) {
+            printf("Entrada invalida!\n");
+            return 1;
+        }
+
+        // Verifica coordenadas
+        if(casaX < 0 || casaX >= 9 ||
+           casaY < 0 || casaY >= 9) {
+
+            printf("Coordenadas invalidas!\n");
+            continue;
+        }
+
+        // Verifica casa repetida
+        if(visivel[casaX][casaY] == 1) {
+            printf("Essa casa ja foi aberta!\n");
+            continue;
+        }
+
+        visivel[casaX][casaY] = 1;
+
+        // Verifica bomba
+        if(campo[casaX][casaY] == bomba) {
+
+            perdeu = 1;
+            printf("\nBOOOOM! Voce perdeu!\n");
+
+        } else {
+
+            jogadas++;
+            printf("\nCasa segura!\n");
+        }
+    }
+
+    // Resultado
+    if(perdeu == 0) {
+        printf("\nPARABENS! VOCE VENCEU!\n");
+    }
+
+    // Mostra o campo completo
+    printf("\n===== CAMPO COMPLETO =====\n");
+
+    for(i = 0; i < 9; i++) {
+        for(j = 0; j < 9; j++) {
+
+            if(campo[i][j] == bomba) {
+                printf("B ");
+            } else {
+                printf("%d ", campo[i][j]);
+            }
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
+
