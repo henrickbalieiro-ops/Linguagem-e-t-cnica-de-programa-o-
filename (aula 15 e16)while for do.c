@@ -10,7 +10,8 @@ int main(int argc, char *argv[]) {
     
     O FOR(para) e utilizado quando sabemos quantas vezes
     queremos repetir um conjunto de instrucoes.
-
+	iniciacao, verificacao, incremento
+	
     Possui tres partes:
     - Inicializacao: define o valor inicial.
     - Condicao: determina quando o laco termina.
@@ -61,6 +62,7 @@ int main(int argc, char *argv[]) {
     O DO(faca) WHILE executa primeiro as instrucoes e
     depois verifica a condicao.
 
+	nn testa, inverso while
     Diferentemente do WHILE, ele executa pelo menos
     uma vez, mesmo que a condicao seja falsa.
     */
