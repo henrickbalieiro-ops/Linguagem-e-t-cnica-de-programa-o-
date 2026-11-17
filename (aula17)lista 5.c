@@ -3,6 +3,9 @@
 
 int main(int argc, char *argv[]) {
 	
+	//EX1
+	
+	//EX2
 	//EX3
 	int n, aux, mult=1;
 	scanf("%d", &n);
@@ -17,5 +20,9 @@ int main(int argc, char *argv[]) {
 		
 	//ler oa contrario da divisao
 	
+	//EX4
+	//EX5
+	//EX6
+	//EX7
 	return 0;
 }
